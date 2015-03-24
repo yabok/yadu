@@ -1,23 +1,21 @@
 /***
-  This file is part of systemd.
-
   Timezone file reading code from glibc 2.16.
 
   Copyright (C) 1991-2012 Free Software Foundation, Inc.
-  Copyright 2012 Kay Sievers
+  Copyright (C) 2012 Kay Sievers
 
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
+  yadu is free software; you can redistribute it and/or modify it under the
+  terms of the GNU Lesser General Public License as published by the Free
+  Software Foundation; either version 2.1 of the License, or (at your option)
+  any later version.
 
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
+  yadu is distributed in the hope that it will be useful, but WITHOUT ANY
+  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+  A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+  details.
 
   You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
+  along with yadu; If not, see <http://www.gnu.org/licenses/>.
 ***/
 #include <errno.h>
 #include <stddef.h>
