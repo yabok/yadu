@@ -11,9 +11,9 @@ endif
 
 all: yadu
 
-yadu: yadu.c time-dst.c time-dst.h util.h
+yadu: $(addprefix src/, yadu.c time-dst.c time-dst.h util.h)
 	$(verbose_echo) "  CC    $@"
-	$(verbose_hide) $(CC)  $(CFLAGS)  -o $@  yadu.c time-dst.c
+	$(verbose_hide) $(CC)  $(CFLAGS)  -o $@  src/yadu.c src/time-dst.c
 
 clean:
 	-rm -f yadu
