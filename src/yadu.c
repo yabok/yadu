@@ -82,8 +82,8 @@ int main(int argc, char ** argv) {
 	bool is_dstc = false,
 	     is_dstn = false;
 	int r = time_get_dst(tms.tv_sec, path,
-			&time_cur, &zone_cur, &is_dstc,
-			&time_next, &delta_next, &zone_next, &is_dstn);
+	                     &time_cur, &zone_cur, &is_dstc,
+	                     &time_next, &delta_next, &zone_next, &is_dstn);
 
 	if (r < 0) {
 		printf("      DST active: %s\n", "n/a");
@@ -98,23 +98,24 @@ int main(int argc, char ** argv) {
 		strftime(a, ELEMENTSOF(a), "%a %Y-%m-%d %H:%M:%S %Z", localtime_r(&time, &tm));
 		strftime(b, ELEMENTSOF(b), "%a %Y-%m-%d %H:%M:%S %Z", localtime_r(&time_cur, &tm));
 		printf(" Last DST change: DST %s at\n"
-				"                  %.*s\n"
-				"                  %.*s\n",
-				is_dstc ? "began" : "ended",
-				(int)sizeof(a), a,
-				(int)sizeof(b), b);
+		       "                  %.*s\n"
+		       "                  %.*s\n",
+		       is_dstc ? "began" : "ended",
+		       (int)sizeof(a), a,
+		       (int)sizeof(b), b);
 
 		char s[32];
 		time = time_next - 1;
 		strftime(a, ELEMENTSOF(a), "%a %Y-%m-%d %H:%M:%S %Z", localtime_r(&time, &tm));
 		strftime(b, ELEMENTSOF(b), "%a %Y-%m-%d %H:%M:%S %Z", localtime_r(&time_next, &tm));
 		printf(" Next DST change: DST %s (the clock jumps %s) at\n"
-				"                  %.*s\n"
-				"                  %.*s\n",
-				is_dstn ? "begins" : "ends",
-				jump_str(delta_next, s, sizeof(s)),
-				(int) sizeof(a), a,
-				(int) sizeof(b), b);
+		       "                  %.*s\n"
+		       "                  %.*s\n",
+		       is_dstn ? "begins" : "ends",
+		       jump_str(delta_next, s, sizeof(s)),
+		       (int) sizeof(a), a,
+		       (int) sizeof(b), b);
 	}
+
 	return 0;
 }
