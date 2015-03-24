@@ -55,8 +55,7 @@ int main(int argc, char ** argv) {
 	}
 
 	if (getenv("TZ")) {
-		fprintf(stderr, "Warning: TZ variable set, output times will not be in the specified zone\n");
-	} else {
+		fprintf(stderr, "Warning: Ignoring the TZ variable.\n");
 		setenv("TZ", argv[1], 1);
 	}
 
