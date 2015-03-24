@@ -1,4 +1,6 @@
 #pragma once
+#include <stdbool.h>
+#include <time.h>
 
 /***
   This file is part of systemd.

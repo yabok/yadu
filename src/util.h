@@ -1,6 +1,6 @@
-#include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 #define _cleanup_free_ __attribute__((cleanup(freep)))
 #define _cleanup_fclose_ __attribute__((cleanup(fclosep)))
